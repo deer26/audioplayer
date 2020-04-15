@@ -23,15 +23,16 @@ class _PianoViewState extends State<PianoView> {
       child: Container(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            _flatButton(0),
-            _flatButton(1),
-            _flatButton(2),
-            _flatButton(3),
-            _flatButton(4),
-            _flatButton(5),
-            _flatButton(6),
-          ],
+          children: List.generate(6, (val)=>_flatButton(val)),
+          // children: <Widget>[
+          //   _flatButton(0),
+          //   _flatButton(1),
+          //   _flatButton(2),
+          //   _flatButton(3),
+          //   _flatButton(4),
+          //   _flatButton(5),
+          //   _flatButton(6),
+          // ],
         ),
       ),
     );
